@@ -1,0 +1,23 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-06T21:20:00Z" },
+  "title": "Affinities round 01",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html":              { "x": 0,    "y": 0,    "w": 1280, "h": 1000, "title": "1 · Purity", "expand": "fill" },
+    "Supremacy.dc.html":         { "x": 1360, "y": 0,    "w": 1280, "h": 1000, "title": "2 · Supremacy", "expand": "fill" },
+    "Harmony.dc.html":           { "x": 2720, "y": 0,    "w": 1280, "h": 1000, "title": "3 · Harmony", "expand": "fill" },
+    "PuritySupremacy.dc.html":   { "x": 0,    "y": 1120, "w": 1280, "h": 1000, "title": "4 · Purity–Supremacy", "expand": "fill" },
+    "PurityHarmony.dc.html":     { "x": 1360, "y": 1120, "w": 1280, "h": 1000, "title": "5 · Purity–Harmony", "expand": "fill" },
+    "SupremacyHarmony.dc.html":  { "x": 2720, "y": 1120, "w": 1280, "h": 1000, "title": "6 · Supremacy–Harmony", "expand": "fill" }
+  },
+  "order": [
+    "Main.dc.html", "Supremacy.dc.html", "Harmony.dc.html",
+    "PuritySupremacy.dc.html", "PurityHarmony.dc.html", "SupremacyHarmony.dc.html"
+  ],
+  "notes": {
+    "t1": { "x": 0, "y": -300, "text": "Hardware report · six affinities from Rising Tide · each board has a Dark tweak", "kind": "title1", "maxW": 4000 }
+  },
+  "designSystems": []
+}

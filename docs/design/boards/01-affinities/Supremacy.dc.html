@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Supremacy hardware report</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F5FBF}a:hover{color:#164A96}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 1000px; box-sizing: border-box; background: {{c.ground}}; color: {{c.ink}}; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.5; display: flex; flex-wrap: wrap">
+
+  <nav aria-label="Sections" style="flex: 1 1 220px; max-width: 240px; box-sizing: border-box; padding: 32px 24px; border-right: 1px solid {{c.line}}; display: flex; flex-direction: column; gap: 32px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="font-family: 'Rajdhani', Georgia, serif; font-size: 28px; line-height: 1.05; font-weight: 600">Sovereign AI explorer</div>
+      <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: {{c.mute}}">Supremacy · beyond the body</div>
+    </div>
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px">
+      <li><a href="#hardware" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 4px; background: {{c.surface}}; color: {{c.ink}}; text-decoration: none; font-weight: 600; box-shadow: {{c.lift}}; border-left: 2px solid {{c.accent}}">Hardware</a></li>
+      <li><a href="#catalogue" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 4px; color: {{c.mute}}; text-decoration: none; font-weight: 500">Catalogue</a></li>
+      <li><a href="#run" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 4px; color: {{c.mute}}; text-decoration: none; font-weight: 500">Run</a></li>
+      <li><a href="#benchmarks" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 4px; color: {{c.mute}}; text-decoration: none; font-weight: 500">Benchmarks</a></li>
+    </ul>
+    <div style="margin-top: auto; font-size: 13px; color: {{c.mute}}; line-height: 1.5; border-top: 1px solid {{c.line}}; padding-top: 16px">Nothing leaves this machine. The network is used for the catalogue and downloads only, and every fetch is listed.</div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 32px 40px 40px 40px; display: flex; flex-direction: column; gap: 28px">
+    <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+      <div>
+        <h1 id="hardware" style="margin: 0; font-family: 'Rajdhani', Georgia, serif; font-weight: 600; font-size: 46px; line-height: 1">Hardware</h1>
+        <div style="margin-top: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: {{c.mute}}">read at 21:14:08 · every number says how it was obtained</div>
+      </div>
+      <button type="button" style="min-height: 44px; min-width: 44px; padding: 0 20px; border: 1px solid {{c.accentInk}}; background: transparent; color: {{c.accentInk}}; border-radius: 4px; font: inherit; font-weight: 600; cursor: pointer">Refresh</button>
+    </header>
+
+    <section aria-labelledby="machine" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="machine" style="margin: 0; font-family: 'Rajdhani', Georgia, serif; font-weight: 600; font-size: 26px">This machine</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+        <div style="background: {{c.surface}}; border: 1px solid {{c.line}}; border-radius: 6px; padding: 16px; box-shadow: {{c.lift}}; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: {{c.mute}}">Processor</div>
+          <div style="font-size: 17px; font-weight: 600">12th Gen Intel Core i7-12700H</div>
+          <div style="color: {{c.mute}}">14 cores · 20 threads</div>
+          <span style="align-self: flex-start; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: {{c.mute}}; border: 1px solid {{c.line}}; border-radius: 3px; padding: 2px 6px">measured · sysinfo</span>
+        </div>
+        <div style="background: {{c.surface}}; border: 1px solid {{c.line}}; border-radius: 6px; padding: 16px; box-shadow: {{c.lift}}; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: {{c.mute}}">Memory</div>
+          <div style="font-size: 17px; font-weight: 600">31.7 GiB total</div>
+          <div style="color: {{c.mute}}">19.2 GiB available now</div>
+          <span style="align-self: flex-start; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: {{c.mute}}; border: 1px solid {{c.line}}; border-radius: 3px; padding: 2px 6px">measured · sysinfo</span>
+        </div>
+        <div style="background: {{c.surface}}; border: 1px solid {{c.line}}; border-radius: 6px; padding: 16px; box-shadow: {{c.lift}}; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: {{c.mute}}">Disk at the models folder</div>
+          <div style="font-size: 17px; font-weight: 600">350 GB free of 1 TB</div>
+          <div style="color: {{c.mute}}">local app data · models</div>
+          <span style="align-self: flex-start; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: {{c.mute}}; border: 1px solid {{c.line}}; border-radius: 3px; padding: 2px 6px">measured · filesystem</span>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="graphics" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="graphics" style="margin: 0; font-family: 'Rajdhani', Georgia, serif; font-weight: 600; font-size: 26px">Graphics</h2>
+      <div style="overflow-x: auto; background: {{c.surface}}; border: 1px solid {{c.line}}; border-radius: 6px; box-shadow: {{c.lift}}">
+        <table style="width: 100%; border-collapse: collapse; min-width: 720px">
+          <thead>
+            <tr style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: {{c.mute}}">
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">GPU</th>
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Type</th>
+              <th scope="col" style="text-align: right; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">VRAM</th>
+              <th scope="col" style="text-align: right; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Free now</th>
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Driver</th>
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Energy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 600">NVIDIA GeForce RTX 3070 Ti Laptop GPU</td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; color: {{c.mute}}">dedicated</td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">8192 MiB <span style="font-size: 11px; color: {{c.mute}}">· NVML</span></td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">7420 MiB <span style="font-size: 11px; color: {{c.mute}}">· NVML</span></td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; font-family: 'IBM Plex Mono', ui-monospace, monospace">616.92</td>
+              <td style="padding: 14px 16px; border-bottom: 1px solid {{c.line}}; color: {{c.accentInk}}; font-weight: 600">measurable through NVML</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 16px; font-weight: 600">Intel Iris Xe Graphics</td>
+              <td style="padding: 14px 16px; color: {{c.mute}}">integrated · shared memory · not used for fit</td>
+              <td style="padding: 14px 16px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace; color: {{c.mute}}">shared <span style="font-size: 11px">· DXGI</span></td>
+              <td style="padding: 14px 16px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace; color: {{c.mute}}">—</td>
+              <td style="padding: 14px 16px; color: {{c.mute}}">—</td>
+              <td style="padding: 14px 16px; color: {{c.mute}}">not measurable; estimates only</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="fits" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 id="fits" style="margin: 0; font-family: 'Rajdhani', Georgia, serif; font-weight: 600; font-size: 26px">What fits</h2>
+      <div style="overflow-x: auto; background: {{c.surface}}; border: 1px solid {{c.line}}; border-radius: 6px; box-shadow: {{c.lift}}">
+        <table style="width: 100%; border-collapse: collapse; min-width: 720px">
+          <thead>
+            <tr style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: {{c.mute}}">
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Model class</th>
+              <th scope="col" style="text-align: right; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">File</th>
+              <th scope="col" style="text-align: right; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">KV cache · 8k</th>
+              <th scope="col" style="text-align: right; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Need</th>
+              <th scope="col" style="text-align: left; padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 500">Verdict</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 600">8B · Q4_K_M</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">4.6 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">1.0 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">6.4 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}"><span style="display: inline-block; padding: 3px 10px; border-radius: 3px; font-weight: 600; color: {{c.good}}; background: {{c.goodBg}}; border: 1px solid {{c.good}}">fits on the GPU</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 600">8B · Q8_0</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">8.0 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">1.0 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">9.8 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}"><span style="display: inline-block; padding: 3px 10px; border-radius: 3px; font-weight: 600; color: {{c.warn}}; background: {{c.warnBg}}; border: 1px solid {{c.warn}}">partial CPU offload</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 600">13B · Q4_K_M</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">8.0 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">1.3 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">10.0 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}"><span style="display: inline-block; padding: 3px 10px; border-radius: 3px; font-weight: 600; color: {{c.warn}}; background: {{c.warnBg}}; border: 1px solid {{c.warn}}">partial CPU offload</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; font-weight: 600">30B class · Q4_K_M</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">18 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">1.5 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">20 GiB</td>
+              <td style="padding: 12px 16px; border-bottom: 1px solid {{c.line}}"><span style="display: inline-block; padding: 3px 10px; border-radius: 3px; font-weight: 600; color: {{c.warn}}; background: {{c.warnBg}}; border: 1px solid {{c.warn}}">partial CPU offload · slow</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; font-weight: 600">70B · Q4_K_M</td>
+              <td style="padding: 12px 16px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">40 GiB</td>
+              <td style="padding: 12px 16px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">2.5 GiB</td>
+              <td style="padding: 12px 16px; text-align: right; font-family: 'IBM Plex Mono', ui-monospace, monospace">43 GiB</td>
+              <td style="padding: 12px 16px"><span style="display: inline-block; padding: 3px 10px; border-radius: 3px; font-weight: 600; color: {{c.bad}}; background: {{c.badBg}}; border: 1px solid {{c.bad}}">does not fit</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: {{c.mute}}">estimated · formula: file + KV cache + 0.75 GiB overhead, against 7 GiB usable VRAM (8 GiB minus 1 GiB kept for the desktop). File sizes are class estimates until the catalogue reports real files.</div>
+    </section>
+
+    <section aria-labelledby="tokens" style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid {{c.line}}; padding-top: 20px">
+      <h2 id="tokens" style="margin: 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: {{c.mute}}">Tokens · Supremacy · Rajdhani, IBM Plex Sans, IBM Plex Mono · light lifts with shadow, dark lifts with cyan glow</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 13px; font-weight: 600">Light · Chrome</div>
+          <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px">
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #ECEFF4; border: 1px solid #C9D1DC"></div><div>ground #ECEFF4</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #F7F9FC; border: 1px solid #C9D1DC"></div><div>surface #F7F9FC</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #0F141C"></div><div>ink #0F141C</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #596475"></div><div>mute #596475</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #19B6E0"></div><div>cyan #19B6E0</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #1F5FBF"></div><div>cobalt-ink #1F5FBF</div></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <div style="font-size: 13px; font-weight: 600">Dark · Void deck</div>
+          <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10px">
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #090C12; border: 1px solid #223047"></div><div>ground #090C12</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #10151F; border: 1px solid #223047"></div><div>surface #10151F</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #E3E9F2"></div><div>ink #E3E9F2</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #94A1B5"></div><div>mute #94A1B5</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #19B6E0"></div><div>cyan #19B6E0</div></div>
+            <div style="display: flex; flex-direction: column; gap: 4px"><div style="height: 36px; border-radius: 4px; background: #35C0EE"></div><div>cyan-ink #35C0EE</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":true,"section":"Mode"},"$preview":{"width":1280,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const light = {
+      ground: '#ECEFF4', surface: '#F7F9FC', line: '#C9D1DC', ink: '#0F141C', mute: '#596475',
+      accent: '#19B6E0', accentInk: '#1F5FBF',
+      lift: '0 8px 24px rgba(15, 20, 28, 0.08)',
+      good: '#1E6B3C', goodBg: 'rgba(30, 107, 60, 0.10)',
+      warn: '#8A5200', warnBg: 'rgba(138, 82, 0, 0.10)',
+      bad: '#A32D2D', badBg: 'rgba(163, 45, 45, 0.10)'
+    };
+    const dark = {
+      ground: '#090C12', surface: '#10151F', line: '#223047', ink: '#E3E9F2', mute: '#94A1B5',
+      accent: '#19B6E0', accentInk: '#35C0EE',
+      lift: '0 0 0 1px rgba(53, 192, 238, 0.30), 0 0 22px rgba(53, 192, 238, 0.20)',
+      good: '#6FD39A', goodBg: 'rgba(111, 211, 154, 0.12)',
+      warn: '#F0B85A', warnBg: 'rgba(240, 184, 90, 0.12)',
+      bad: '#FF8A80', badBg: 'rgba(255, 138, 128, 0.12)'
+    };
+    const c = (this.props.dark ?? false) ? dark : light;
+    return { c };
+  }
+}
+</script>
+</body>
+</html>
